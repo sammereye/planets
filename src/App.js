@@ -21,7 +21,7 @@ function App() {
       <Header planets={data} activePlanet={activePlanet} setPlanet={setPlanet} setInMenu={setInMenu} inMenu={inMenu} />
       <Main planets={data} activePlanet={activePlanet} setPlanet={setPlanet} inMenu={inMenu} />
 
-      {/* <Dots /> */}
+      <Dots />
     </div>
   );
 }
