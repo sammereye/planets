@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+
+import Dots from './Dots';
+import Header from './Header';
+import Main from './Main';
+import data from './data.json';
 
 function App() {
+  let [activePlanet, setActivePlanet] = useState(data[0]);
+  let [inMenu, setInMenu] = useState(false);
+
+  let setPlanet = (id) => {
+    setActivePlanet(data[id]);
+    if (inMenu) {
+      setInMenu(!inMenu)
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header planets={data} activePlanet={activePlanet} setPlanet={setPlanet} setInMenu={setInMenu} inMenu={inMenu} />
+      <Main planets={data} activePlanet={activePlanet} setPlanet={setPlanet} inMenu={inMenu} />
+
+      {/* <Dots /> */}
     </div>
   );
 }
