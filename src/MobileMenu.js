@@ -9,7 +9,7 @@ const MobileMenu = ({ planets, setPlanet }) => {
               <div style={{backgroundColor: planet.color}} className="w-4 h-4 rounded-full mr-9"></div>
               <div className="text-[#D8D8D8] font-[Spartan] font-bold uppercase">{planet.name}</div>
             </div>
-            <img src="/assets/icon-chevron.svg" alt="chevron" />
+            <img src="./assets/icon-chevron.svg" alt="chevron" />
           </div>
           )
         })
