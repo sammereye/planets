@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-import Dots from './Dots';
 import Header from './Header';
 import Main from './Main';
 import data from './data.json';
@@ -20,8 +19,6 @@ function App() {
     <div className="App">
       <Header planets={data} activePlanet={activePlanet} setPlanet={setPlanet} setInMenu={setInMenu} inMenu={inMenu} />
       <Main planets={data} activePlanet={activePlanet} setPlanet={setPlanet} inMenu={inMenu} />
-
-      <Dots />
     </div>
   );
 }
